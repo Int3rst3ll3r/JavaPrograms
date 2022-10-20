@@ -16,12 +16,27 @@ public class peakElement {
 		}
 		System.out.println("The array is ");
 		System.out.println(Arrays.toString(arr));
-		int h =PeakElement1.peakele(arr,n);
+		int h =peakElement.peakele(arr,n);
 		System.out.println("the index of the peak element is "+ h);
 		
 	
 	}
+	static int peakele(int arr[],int n) {
+		   
+	      if(n==0) { return 0; }
+	   
+	      if(arr[0]>=arr[1]) { return 0; }
+	      
+	      if(arr[n-1]>=arr[n-2]) { return n-1; }
+	      
+	      for(int i=1;i<n-1;i++) {
+	    	  if(arr[i]>=arr[i-1]&&arr[i]>=arr[i+1]) {
+	    		  return i;
+	    	  }
+	      }
+	   return 0;
 
+}
    }
 
 
