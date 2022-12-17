@@ -1,9 +1,9 @@
 package com.Atinder.encapsulation;
 
-public class ConstructorOverloadingApp {
+public class EmployeeApp {
 
 	public static void main(String[] args) {
-		ConstructorOverloading emp = new ConstructorOverloading(123);
+		Employee emp = new Employee();
          System.out.println(emp.id+" "+emp.name+" "+emp.height);
 	}
 
